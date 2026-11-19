@@ -52,7 +52,7 @@ namespace BasicProgram
             {
                 Console.Write("Input money : ");
                 int.TryParse(Console.ReadLine(), out money);
-            } while (money % 100 != 0);
+            } while (money % 100 != 0 || (money >= 20000);
             Console.WriteLine("Money is : {0}", money);
             Console.WriteLine("1000 B = {0}", money / 1000);
             money %= 1000;
