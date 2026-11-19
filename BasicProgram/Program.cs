@@ -22,7 +22,7 @@ namespace BasicProgram
                 }
                 Console.WriteLine("Can't change tr again");
             }
-            
+
             while (money % 100 <= 100)
             {
                 curMoney = money;
@@ -44,9 +44,23 @@ namespace BasicProgram
                 Console.Write("Your change 1000 is : {0} | 500 is : {1} | 100 is {2}", count10, count5, count1);
                 break;
             }
-            
-            //แบบง่าย{เฉลย}
 
+            //แบบง่าย{เฉลย}
+            /*
+            int money;
+            do
+            {
+                Console.Write("Input money : ");
+                int.TryParse(Console.ReadLine(), out money);
+            } while (money % 100 != 0);
+            Console.WriteLine("Money is : {0}", money);
+            Console.WriteLine("1000 B = {0}", money / 1000);
+            money %= 1000;
+            Console.WriteLine("500 B = {0}", money / 500);
+            money %= 500;
+            Console.WriteLine("100 B = {0}", money / 100);
+            Console.ReadKey();
+            */
         }
     }
 }
