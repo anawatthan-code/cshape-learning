@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="BasicProgram/BasicProgram.csproj" Id="d77d6fd9-895d-4cf5-8d4a-98d4049bd928" />
+  <Project Path="BankAccount/BankAccount.csproj" Id="d77d6fd9-895d-4cf5-8d4a-98d4049bd928" />
   <Project Path="OOPTutorial/OOPTutorial.csproj" Id="532284b5-9a86-475e-9944-4d184fb6bf65" />
   <Project Path="TicTacToe/TicTacToe.csproj" Id="e1609a92-8450-4e2b-b303-bae2351344be" />
 </Solution>

@@ -12,6 +12,7 @@ namespace TicTacToe
 
             while (!checkVictory() && turn != 9)
             {
+                Console.WriteLine();
                 PrintBoard();
                 if (isPlayerTurn)
                 {
@@ -23,10 +24,10 @@ namespace TicTacToe
                 }
                 Console.Write("Choses ypur choice : ");
                 string choice = Console.ReadLine();
-                if (board.Contains(choice) && choice != "X" && choice != "O")
+                int.TryParse(choice, out int numChoice);
+                if (board.Contains(choice) && choice != "X" && choice != "O" && numChoice < 10 && numChoice > 0)
                 {
                     int boardIndex = Convert.ToInt32(choice) - 1;
-
                     if (isPlayerTurn)
                     {
                         board[boardIndex] = "X";
@@ -35,9 +36,14 @@ namespace TicTacToe
                     {
                         board[boardIndex] = "O";
                     }
+                    isPlayerTurn = !isPlayerTurn;
                     turn++;
                 }
-                isPlayerTurn = !isPlayerTurn;
+                else
+                {
+                    Console.WriteLine("TRY AGAIN!!");
+                }
+                
             }
 
             if (checkVictory())
