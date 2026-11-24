@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Employee emp1 = new Employee();
+            Console.WriteLine(emp1.name);
+            Console.WriteLine(emp1.salary);
         }
     }
 }
