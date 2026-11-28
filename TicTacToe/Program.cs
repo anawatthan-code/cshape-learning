@@ -166,7 +166,6 @@ namespace TicTacToe
                             int.TryParse(Console.ReadLine(), out int playAgain);
                             if (playAgain == 1)
                             {
-                                // BUG กดเริ่มใหม่บอทเอ๋อไม่รีค่าสุ่มใหม่
                                 reserBotIndex();
                                 resetBoard();
                                 break;
@@ -241,12 +240,12 @@ namespace TicTacToe
             }
 
             //ระบบบอทสุ่มเลขลงช่อง
-            int botRandom()          // void -> int
+            int botRandom()     
             {
                 int index = rnd.Next(available.Length);
                 int pick = available[index];
                 available = RemoveAt(available, index);
-                return pick;                // ส่งเลขที่สุ่มได้ออกไป
+                return pick;// ส่งเลขที่สุ่มได้ออกไป
             }
 
             static int[] RemoveAt(int[] arr, int index)
@@ -267,13 +266,14 @@ namespace TicTacToe
             void reserBotIndex()
             {
                 available = new int[9];
+
                 
                 for (int i = 0; i < available.Length; i++)
                 {
                     int num = i + 1;
                     string boardIndexs = num.ToString();
                     board[i] = boardIndexs;
-                    Console.WriteLine("boardIndexs is : {0}",boardIndexs);
+                    available[i] = num;
                 }
             }
 
